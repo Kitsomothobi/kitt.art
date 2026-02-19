@@ -1,8 +1,13 @@
 # Importing in our libraries and useful utilities
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Form
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import RedirectResponse
+
 from datetime import datetime
+
+# Test
+submissions = []
 
 # Initliaze the fastapi obeject
 app = FastAPI()
@@ -48,3 +53,30 @@ def commissions(request: Request):
 @app.get("/projects")
 def projects(request: Request):
     return render(request, "projects.html", "projects")
+
+
+# Commission form 
+@app.post("/commissions")
+def submit_commission(request: Request,
+    name: str = Form(...),
+    email: str = Form(...),
+    type: str = Form(...),
+    budget: str = Form(None),
+    description: str = Form(...) ):
+
+    submissions.append({
+        "name": name,
+        "email": email,
+        "type": type,
+        "budget": budget,
+        "description": description
+    })
+
+    return templates.TemplateResponse(
+        "commission_success.html",
+        {
+            "request": request,
+            "name": name,
+            "active_page": "commissions",
+            "year": datetime.now().year
+        })
