@@ -1,9 +1,58 @@
 <!-- Jinja will dynamically inject html code when the website is running in order to habe index html, be proper code -->
-{% extends "base.html" %}
-    {% block title %}Home · kitt.art{% endblock %}
+  {% extends "base.html" %}
+{% block title %}Home · kitt.art{% endblock %}
 
-    {% block content %}
-  <h1>kitt.art</h1>
-  <p>Digital artist & backend developer.</p>
+{% block content %}
+<!-- Hero section -->
+<section class="hero">
+
+  <!-- Personal Introduction -->
+   <div class="hero-left">
+    <p class="kicker">Digital Artist • Backend Developer</p>
+    <h1>kitt.art</h1>
+    <p class="lead">
+      I build clean backend systems with FastAPI + PostgreSQL, and I take digital art commissions.
+    </p>
+
+    <!--Ccalls to action -->
+    <div class="cta-row">
+      <a class="btn primary" href="/commissions">Request a commission</a>
+      <a class="btn" href="/projects">View dev projects</a>
+    </div>
+
+    <div class="pill-row">
+      <span class="pill">FastAPI</span>
+      <span class="pill">SQLAlchemy</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">Digital Painting</span>
+      <span class="pill">Character Art</span>
+    </div>
+  </div>
+
+  <!-- Mini showcase -->
+  <div class="hero-right">
+    <div class="preview-card">
+      <div class="preview-title">Featured</div>
+      <div class="preview-body">
+        <p class="muted">Add artwork thumbnails later.</p>
+        <div class="mini-grid">
+          <div class="mini"></div>
+          <div class="mini"></div>
+          <div class="mini"></div>
+          <div class="mini"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="preview-card">
+      <div class="preview-title">Currently building</div>
+      <div class="preview-body">
+        <p><strong>kitt.art</strong></p>
+        <p class="muted small">FastAPI + Jinja + PostgreSQL (commissions + blog)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
 
