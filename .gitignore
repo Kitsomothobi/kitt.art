@@ -1,0 +1,18 @@
+# GitIgnore serves as a safeguard to ensure we do not accidentally upload sensitive information to github
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
