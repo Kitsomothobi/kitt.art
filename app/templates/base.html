@@ -12,20 +12,24 @@
         <a class="brand" href="/">kitt.art</a>
 
         <!-- Main Links -->
-        <nav class="links">
-            <a href="/gallery">Art</a>
-            <a href="/blog">Blog</a>
-            <a href="/commissions">Commissions</a>
-            <a href="/projects">Projects</a>
-        </nav>
+    <nav class="links">
+        <a class="{% if active_page=='gallery' %}active{% endif %}" href="/gallery">Art</a>
+        <a class="{% if active_page=='blog' %}active{% endif %}" href="/blog">Blog</a>
+        <a class="{% if active_page=='commissions' %}active{% endif %}" href="/commissions">Commissions</a>
+        <a class="{% if active_page=='projects' %}active{% endif %}" href="/projects">Dev</a>
+    </nav>
+    
     </header>
 
   <main class="wrap">
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="footer">
+   <footer class="footer">
     <small>© {{ year }} kitt.art</small>
   </footer>
+
+
+  
 </body>
 </html>

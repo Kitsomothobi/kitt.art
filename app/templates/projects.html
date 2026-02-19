@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Dev · kitt.art{% endblock %}
+{% block content %}
+<h1>Dev Projects</h1>
+<p>Backend-focused projects using FastAPI and PostgreSQL.</p>
+
+<div class="grid">
+  <div class="card">
+    <strong>FastAPI CRUD (Team/Staff)</strong>
+    <p class="muted">SQLAlchemy + Postgres + CRUD endpoints.</p>
+  </div>
+  <div class="card">
+    <strong>kitt.art</strong>
+    <p class="muted">Portfolio site served by FastAPI with DB-backed commissions.</p>
+  </div>
+</div>
+{% endblock %}
