@@ -1,3 +1,9 @@
+/* Index.html */
 body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-
 .hero { padding: 48px;}
+
+/* base.html */
+.nav { display:flex; justify-content:space-between; align-items:center; padding:20px 48px; }
+.links a { margin-left:16px; }
+.brand { font-weight:700; text-decoration:none; }
+.footer { padding:24px 48px; opacity:0.7; }

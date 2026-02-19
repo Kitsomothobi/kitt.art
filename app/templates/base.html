@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}kitt.art{% endblock %}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="nav">
+        <a class="brand" href="/">kitt.art</a>
+
+        <!-- Main Links -->
+        <nav class="links">
+            <a href="/gallery">Art</a>
+            <a href="/blog">Blog</a>
+            <a href="/commissions">Commissions</a>
+            <a href="/projects">Projects</a>
+        </nav>
+    </header>
+
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <small>© {{ year }} kitt.art</small>
+  </footer>
+</body>
+</html>
